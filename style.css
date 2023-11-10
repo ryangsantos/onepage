@@ -30,6 +30,9 @@
     padding: 0;
     border: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: var(--font-texto);
@@ -78,12 +81,17 @@ body {
     justify-content: space-evenly;
 }
 
-.flex5{
+.flex5 {
     display: flex;
     flex-direction: column-reverse;
 }
 
-.card{
+.flex6 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
     margin-top: 20px;
     width: 338px;
     height: 540px;
@@ -93,21 +101,21 @@ body {
     text-align: center;
 }
 
-.card img{
+.card img {
     border-radius: 25px 25px 0px 0px;
 }
 
-.card h3{
+.card h3 {
     margin-top: 15px;
 }
 
-.card p{
+.card p {
     text-align: left;
     padding: 10px 30px 50px 30px;
     color: var(--cor1);
 }
 
-.card a{
+.card a {
     padding: 10px 100px;
     border: 0;
 }
@@ -195,6 +203,7 @@ main h2 {
 #onepage h2 {
     margin-bottom: 10px;
 }
+
 #onepage p {
     margin-bottom: 25px;
 }
@@ -228,46 +237,46 @@ main h2 {
     margin-right: 10px;
 }
 
-#wireframe{
+#wireframe {
     padding: 50px 0px;
     background: url(img/background5.jpg);
     background-size: cover;
     background-position: center;
 }
 
-.texto_wire{
+.texto_wire {
     color: var(--cor1);
     padding: 0px 10px;
 }
 
-.texto_wire h2{
+.texto_wire h2 {
     margin-bottom: 15px;
 }
 
-.texto_wire p{
+.texto_wire p {
     margin-bottom: 40px;
 }
 
-.texto_wire span{
+.texto_wire span {
     display: none;
 }
 
-.qrcode{
+.qrcode {
     display: none;
 }
 
 /* CARTÕES */
 
-#conteudo{
+#conteudo {
     padding: 50px 0px;
 }
 
-#conteudo h2{
+#conteudo h2 {
     padding-bottom: 25px;
     text-align: center;
 }
 
-address{
+address {
     padding: 35px 10px 50px 10px;
     background: url(img/background5.jpg);
     background-size: cover;
@@ -280,32 +289,36 @@ address a {
     color: var(--cor1);
 }
 
-address img{
+address img {
     padding-top: 15px;
 }
 
-.icone_local{
+.icone_local {
     display: none;
 }
 
-.dados{
+.dados {
     margin: 30px 0px 15px 0px;
 }
-.google-maps{
+
+.google-maps {
     display: none;
 }
 
-footer{
+footer {
     padding: 50px;
     background: var(--cor3);
     color: var(--cor1);
     text-align: center;
 }
 
-.social{
+.social {
     margin-bottom: 25px;
 }
 
+.social a {
+    text-decoration: none;
+}
 
 
 /*SMARTPHONE LANDSCAPE*/
@@ -330,7 +343,15 @@ footer{
         height: 315px;
     }
 
+    /*Rodapé*/
+    .flex5 {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
+
 
 /*TABLET PORTAIT*/
 @media (min-width: 768px) {
@@ -439,18 +460,35 @@ footer{
     }
 
     /* WIREFRAME */
-    #wireframe{
+    #wireframe {
         background-attachment: fixed;
     }
-    
-    #wireframe span{
+
+    #wireframe span {
         display: inline;
         color: var(--cor4);
         font-weight: 700;
     }
-    
-    .qrcode{
+
+    .qrcode {
         display: inline;
     }
+
+    .icone_local {
+        display: inline;
+    }
+
+    .icone_mapa {
+        display: none;
+    }
+
+    .google-maps {
+        display: inline;
+    }
+
+    .flex6 {
+        flex-direction: row-reverse;
+    }
+
 
 }
